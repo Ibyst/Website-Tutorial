@@ -3,11 +3,13 @@
 <head>
 <title>Website Tutorial</title>
 <link rel="stylesheet" href="styles.css"> <!--this links the HTML to the CSS file-->
+<linK rel="icon" type="image/x-icon" href="1234.png"> <!--adds a favicon-->
 </head>
 
 <body>
-<h1>Headers go from h1-h6</h1>
-<p>HTML elements can have attributes <br> these are always specified in the start tag</p>
+<h1 id="1">Headers go from h1-h6</h1>
+<p>HTML elements can have attributes which are always specified in the start tag</p>
+<p>you can add a break in text <br> by using the 'br' tag</p>
 <pre>
 the 'pre' element displays in a fixed-width font and preserves
 line breaks and        spaces
@@ -16,17 +18,7 @@ line breaks and        spaces
 
 <hr> <!--a horizontal rule used in a thematic change-->
 
-<h1>Links and Images</h1>
-<p>hyperlinks are created using the 'a' tag, with an href attribute, and optionally a target attribute</p>
-<p>can have the target _self (open in the same tab), _blank (open in a new tab),
-_parent and _top (which aren't really used anymore)</p>
-<a href="https://github.com/Ibyst/Ibyst" target="_top">link to github</a> <!--hyperlink-->
-<br> <!--adds a line break so the image moves to a new line-->
-<img src="githublogo.png" alt="githublogo" width="100" height="100"> <!--image (relative URL)-->
-
-<hr>
-
-<h1>Styles (can be on headers too)</h1>
+<h1 id="2">Styles (can be on headers too)</h1>
 <p style="background-color:antiquewhite;">the style used here is 'background-color'</p>
 <p style="color:chocolate;">the style used here is 'color'</p>
 <p style="font-family:Impact;">the style used here is 'font-family'</p>
@@ -37,7 +29,7 @@ you can also add borders, with different thicknesses, colours, padding and margi
 
 <hr>
 
-<h1>Text Formatting (can be on headers too)</h1>
+<h1 id="3">Text Formatting (can be on headers too)</h1>
 <p>this is <b>bold</b> and this is <i>italic</i></p>
 <p>this is <strong>strong</strong> and this is <em>emphasised</em></p>
 <p>this is <mark>mark</mark> and this is <small>small</small></p>
@@ -49,7 +41,7 @@ you can also add borders, with different thicknesses, colours, padding and margi
 
 <hr>
 
-<h1>Quoting and Citing</h1>
+<h1 id="4">Quoting and Citing</h1>
 <p>A block quote is used for large quotations from other sources and is indented</p>
 <blockquote cite="https://github.com/Ibyst/Website-Tutorial">
 learning to create a website from scratch using HTML, CSS and JS
@@ -94,5 +86,69 @@ used to define a style for a single HTML page</p>
 <p>this is when a <i>link element</i> is used in the <i>head section</i> to link to an external CSS file; 
 used to define a style for many HTML pages</p>
 
+<hr>
+
+<h1>Links</h1>
+<p>hyperlinks are created using the 'a' tag, with an href attribute, and optionally a target attribute</p>
+<p>can have the target _self (open in the same tab), _blank (open in a new tab),
+and _parent and _top (which aren't really used anymore)</p>
+<p>Also, there are absolute URLs, which has a full web address with the https://www part, and relative URLs which 
+link to a page within the same website</p>
+<p>You can have an image act as a link too by putting the 'img' tag inside the 'a' tag, additionally
+you can add a tooltip for an even better effect.</p>
+<a href="https://github.com/Ibyst/Ibyst" target="_blank" title="github">
+    <img src="githublogo.png" alt="github logo" style="width:100px; height:100px;">
+</a>
+<p>You can add 'mailto:' inside the href attribute to have the link open the user's email program</p>
+<a href="mailto:ibaadm2007@gmail.com">email me here</a>
+<p>links can be made as buttons using JS (not shown here) or through CSS by using background colours and padding, 
+although to make the link look different when previously clicked/hovered/active inline CSS can't be used</p>
+<a href="https://www.w3schools.com/html/html_links_colors.asp" target="_blank"
+style="border:2px solid black; background-color:black;color:white; padding:10px; text-decoration:none;">example</a>
+<p>you can add bookmarks to titles by using the 'id' attribute and then you can add links to these bookmarks,
+even if they're on a different page</p>
+<a href="#1">Jump to the top</a>
+
+<hr>
+
+<h1>Images</h1>
+<p>Images use the 'img' tag and have no end tag. They can use absolute or relative URLs.
+Images can be used as links. Images can also be gifs. Loading large images takes time and may slow down your website</p>
+<p>Image tags can have sizes determined by either the width and height attributes, or the style attribute,
+however, using the style attribute is recommended as it will not get overwritten by internal/external CSS</p>
+<p> <img src="githublogo.png" alt="floating github logo" style="float:right;width:50px;height:50px;">
+You can make an image float to the right or the left of text by using the style attribute 'float'</p>
+
+<h2>Image Maps</h2>
+<p>Image maps can be used to define regions on an image and perform an action when these images are clicked
+To create an image map, first define an image as normal but add a 'usemap' attribute. Then, separately, add a
+map attribute, and in this add area attributes, defining the 'shape', 'coords', 'href' and/or any JS functions.
+The shape can be either rect, circle, poly, or default (whole image), and the coords are in pixels.</p>
+<p>Click one of the numbers to go to that respective topic on this page</p>
+<img src="1234.png" alt="1234" usemap="#1234map">
+<map name="1234map">
+    <area shape="rect" coords="26, 26, 98, 98" href="#1">
+    <area shape="rect" coords="125, 26, 197, 98" href="#2">
+    <area shape="rect" coords="26, 125, 98, 197" href="#3">
+    <area shape="rect" coords="125, 125, 197, 197" href="#4">
+</map>
+
+<h2>Background Images</h2>
+<p style="background-image:url(white.jpg); background-repeat:no-repeat; background-attachment:fixed; background-size:cover;">
+You can add an image for the background of the page or of text using the style attribute
+By default, the image repeats itself to fill the sceen, but this can be modified to stretch to fit the screen,
+either with a fixed aspect ratio or stretched.</p>
+
+<h2>Picture Element</h2>
+<p>The picture element can be used to add a bit more specificity when adding images. It can have multiple
+'source' elements with different criteria so that it displays the first image that has the criteria met, kind of
+like a CASE OF statement in pseudocode. The criteria can include different minimum sizes for the display or to
+improve access speeds or the image file type and if the browser supports it.</p>
+<p>This image changes when the display size changes</p>
+<picture>
+    <source media="(min-width:1100px)" srcset="githublogo.png">
+    <source media="(min-width:700px)" srcset="1234.png">
+    <img src="white.jpg">
+</picture>
 </body>
 </html>
