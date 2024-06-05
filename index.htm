@@ -150,5 +150,78 @@ improve access speeds or the image file type and if the browser supports it.</p>
     <source media="(min-width:700px)" srcset="1234.png">
     <img src="white.jpg">
 </picture>
+
+<hr>
+
+<h1>Tables</h1>
+<p>Tables can be made by adding multiple 'td' elements (table data) in multiple 'tr' elements (table row)
+in a 'table' element. A 'th' element can be used in a row to define table headers, which are bold and centred
+but this can be changed through CSS, along with borders and other things. A caption can be added using the
+'caption' element and its style can be modified</p>
+
+<p>Properties 'border-collapse' and 'border-radius' can be modified to have single/rounded borders. Borders can
+be solid, but also dotted, dashed, double, groove, ridge, inset, outset and none/hidden. This, along with the
+colour, can be set in the 'border' property, but can also be their own 'border-color' and 'border-style'
+property, which has higher priority.</p>
+
+<p>To modify the width of  a table, you can add the style attribute to it and change the width. Also, you can
+add the style attribute and change the width of a 'th' or the height of a 'tr'. Measurements are in % screen or
+px</p>
+
+<p>You can addjust the padding inside cells and the spacing between cells. You can merge cells using colspan
+and rowspan, where the content of the cell that is merged remains undefined.</p>
+
+<p>You can create a zebra effect using the :nth-child() selector, putting it on 'td'/'th' makes it vertical and
+putting it on 'tr' makes it horizontal. You can overlap the zebra effect if you use a translucent colour. If
+you use 'border-bottom' on 'tr's instead of having a border around the whole table, you can have a horizontal
+dividers. If you use the ':hover' selector on 'tr's, you can have the row highlighted upon hovering.</p>
+
+<p>you can specify colgroups to have columns styled a certain way, although only the width, visibilty, background
+and border can be changed. These must be placed right after the 'table' element, or right after the 'caption'
+element if it is present.</p>
+
+<!--using colspan and rowspan-->
+<table style="width:100%;">
+    <caption style="font-size:30px; padding-bottom:5px;">Country sizes</caption>
+    <colgroup>
+        <col span="1" style="background-color: honeydew;"><!--I just simulated the effects of the colgroup-->
+        <col span="3">
+        <col span="1" style="background-color: honeydew;"><!--because the external CSS overwrites it ?-->
+    </colgroup>
+    <tr style="height:45px; background-color:black;">
+        <th style="background-color: honeydew; border-radius: 0;">.</th>
+        <th colspan="2">Location</th>
+        <th rowspan="2">Size</th>
+        <th style="background-color: honeydew; border-radius: 0;">.</th>
+    </tr>
+    <tr style="height:40px; background-color:black;">
+        <th style="background-color: honeydew; border-radius: 0;">.</th>
+        <th style="width:50%;">Country</th>
+        <th>Capital</th>
+        <th style="background-color: honeydew; border-radius: 0;">.</th>
+    </tr>
+    <tr>
+        <td style="background-color: honeydew;">.</td>
+        <td>England</td>
+        <td>London</td>
+        <td>Small</td>
+        <td style="background-color: honeydew;">.</td>
+    </tr>
+    <tr>
+        <td style="background-color: honeydew;">.</td>
+        <td>Pakistan</td>
+        <td>Islamabad</td>
+        <td>Medium</td>
+        <td style="background-color: honeydew;">.</td>
+    </tr>
+    <tr>
+        <td style="background-color: honeydew;">.</td>
+        <td>Saudi Arabia</td>
+        <td>Riyadh</td>
+        <td>Large</td>
+        <td style="background-color: honeydew;">.</td>
+    </tr>
+</table>
+
 </body>
 </html>
