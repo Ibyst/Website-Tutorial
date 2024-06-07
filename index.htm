@@ -1,5 +1,6 @@
 <!DOCTYPE html> <!--needed at the start of every html file-->
 <html lang="en-UK"> <!--this attribute helps search engines-->
+
 <head>
 <title>Website Tutorial</title>
 <link rel="stylesheet" href="styles.css"> <!--this links the HTML to the CSS file-->
@@ -7,6 +8,7 @@
 </head>
 
 <body>
+
 <h1 id="1">Headers go from h1-h6</h1>
 <p>HTML elements can have attributes which are always specified in the start tag</p>
 <p>you can add a break in text <br> by using the 'br' tag</p>
@@ -17,7 +19,6 @@ line breaks and        spaces
 <p title="tooltips can be on titles as well">Hover me!</p>
 
 <hr> <!--a horizontal rule used in a thematic change-->
-
 <h1 id="2">Styles (can be on headers too)</h1>
 <p style="background-color:antiquewhite;">the style used here is 'background-color'</p>
 <p style="color:chocolate;">the style used here is 'color'</p>
@@ -28,7 +29,6 @@ line breaks and        spaces
 you can also add borders, with different thicknesses, colours, padding and margins</p>
 
 <hr>
-
 <h1 id="3">Text Formatting (can be on headers too)</h1>
 <p>this is <b>bold</b> and this is <i>italic</i></p>
 <p>this is <strong>strong</strong> and this is <em>emphasised</em></p>
@@ -40,7 +40,6 @@ you can also add borders, with different thicknesses, colours, padding and margi
 <p>emphasis is used when words should be read with verbal stress</p>
 
 <hr>
-
 <h1 id="4">Quoting and Citing</h1>
 <p>A block quote is used for large quotations from other sources and is indented</p>
 <blockquote cite="https://github.com/Ibyst/Website-Tutorial">
@@ -64,16 +63,14 @@ by Edvard Munch, these are in italics</p>
 <bdo dir="rtl">shanta taht atawila</bdo>
 
 <hr>
-
-<h1>Colours</h1>
+<h1 id="5">Colours</h1>
 <p>colours can be used in fonts, backgrounds and borders</p>
 <p>colours can be specified through name, but also RGB(A), HSL(A) and HEX values</p>
 <p>grey shades can be made in HTML by using equal values for all fields</p>
 <p>HSL stands for hue, saturation and lightness</p>
 
 <hr>
-
-<h1>CSS (Cascading Style Sheets)</h1>
+<h1 id="6">CSS (Cascading Style Sheets)</h1>
 <p>used to format the layout of a page, can control color, font, size, positioning, images and more</p>
 <p>can be used inline, interally or externally</p>
 <h2>Inline</h2>
@@ -87,8 +84,7 @@ used to define a style for a single HTML page</p>
 used to define a style for many HTML pages</p>
 
 <hr>
-
-<h1>Links</h1>
+<h1 id="7">Links</h1>
 <p>hyperlinks are created using the 'a' tag, with an href attribute, and optionally a target attribute</p>
 <p>can have the target _self (open in the same tab), _blank (open in a new tab),
 and _parent and _top (which aren't really used anymore)</p>
@@ -110,8 +106,7 @@ even if they're on a different page</p>
 <a href="#1">Jump to the top</a>
 
 <hr>
-
-<h1>Images</h1>
+<h1 id="8">Images</h1>
 <p>Images use the 'img' tag and have no end tag. They can use absolute or relative URLs.
 Images can be used as links. Images can also be gifs. Loading large images takes time and may slow down your website</p>
 <p>Image tags can have sizes determined by either the width and height attributes, or the style attribute,
@@ -152,8 +147,7 @@ improve access speeds or the image file type and if the browser supports it.</p>
 </picture>
 
 <hr>
-
-<h1>Tables</h1>
+<h1 id="9">Tables</h1>
 <p>Tables can be made by adding multiple 'td' elements (table data) in multiple 'tr' elements (table row)
 in a 'table' element. A 'th' element can be used in a row to define table headers, which are bold and centred
 but this can be changed through CSS, along with borders and other things. A caption can be added using the
@@ -222,6 +216,68 @@ element if it is present.</p>
         <td style="background-color: honeydew;">.</td>
     </tr>
 </table>
+
+<hr>
+<h1>Lists</h1>
+<p>Lists can be unordered/bulleted ('ul'), ordered/numbered ('ol') or descriptive('dl'). Lists can be nested. An
+unordered list can have a disc, circle, square or none as its item marker. An ordered list can use numbers,
+capital/lowercase letters, or capital/lowercase roman numerals, and it can start counting from any number</p> 
+
+<dl>
+    <dt>England</dt>
+    <dd>London</dd>
+    <dd>Small</dd>
+    <dt>Pakistan</dt>
+    <dd>Islamabad</dd>
+    <dd>Medium</dd>
+    <dt>Saudi Arabia</dt>
+    <dd>Riyadh</dd>
+    <dd>Large</dd>
+</dl>
+
+<ol type="I" start="10">
+    <li>England</li>
+    <li>Pakistan</li>
+    <li>Saudi Arabia</li>
+</ol>
+
+<p>A list can be made horizontal: paired with some styling, this can be used to create a navigation menu.</p>
+<ul>
+    <li><p>Home</p></li>
+    <li><p>About</p></li>
+    <li><p>Games</p></li>
+    <li><p>Contact</p></li>
+</ul>
+
+<hr>
+<h1>Display Values, Div and Span</h1>
+<p>Every element has a default display value, most commonly either block or inline.</p>
+<p>Block-level elements always start on a new line, has some space (margin) before and after the element, and 
+takes up the full width available. Examples include: blockquotes, h1-6, horiontal rules, lists, div and p.</p>
+<p>Inline elements do not start on new lines and only take the width it needs. Examples include: a, q, button, 
+img and span.</p>
+<p>The div element is used as a containter for other HTML elements and commonly uses the attributes style,
+class and id. It can group sections and with CSS, it can be used to style blocks of content. Div is a block-level
+element, by default, it will take up the full width available. However, if the content doesn't take up the full
+width, you can specify the width then set the margin to auto. You can have div elements side by side on a page in 
+a few ways, like using float, inline-block and grid, but flex is the best way from my research for simplicity</p>
+<div class="Countries">
+    <div style="background-color: #C0CCCC;">
+        <h2>England</h2>
+        <p>Its capital is London</p>
+        <p>It is a small country</p>
+    </div>
+    <div style="background-color: #CCC0CC;">
+        <h2>Pakistan</h2>
+        <p>Its capital is Islamabad</p>
+        <p>It is a medium country</p>
+    </div>
+    <div style="background-color: #CCCCC0;">
+        <h2>Saudi Arabia</h2>
+        <p>Its capital is Riyadh</p>
+        <p>It is a large country</p>
+    </div>
+</div>
 
 </body>
 </html>

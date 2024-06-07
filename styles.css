@@ -21,7 +21,6 @@ td{
     padding:3px;
     padding-left:5px;
 }
-
 tr:nth-child(odd){
     background-color:rgb(50, 50, 50);  
 }
@@ -33,4 +32,39 @@ tr:nth-child(even){
 }
 tr:nth-child(even):hover{
     background-color:rgb(20, 20, 20);
+}
+
+ul{
+    list-style-type: none;
+    background-color: black;
+    color:white;
+    text-align: center;
+    overflow: hidden;
+    margin:0px;
+    padding:0px;
+}
+ul li{
+    float:left
+}
+
+ul li p{
+    display: block;
+    padding-left:10px;
+    padding-right:10px;
+}
+
+ul li:hover{
+    background-color:#101010;
+}
+
+div.Countries{
+    display:flex;
+    align-content: center;
+}
+div.Countries div{
+    width:33%;
+    margin-left:0.33%;
+}
+div.Countries div h2, div.Countries div p{
+    margin:10px;
 }
