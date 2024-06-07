@@ -10,3 +10,5 @@ I am also learning how to use git and github as this is the first project im wor
 4/06/24 - missed one day, but anyways, now learnt more indepth about links and images
 
 5/06/24 - learnt about tables in HTML
+
+7/06/24 - missed a day again, learnt about lists, display values and div.
