@@ -59,7 +59,6 @@ ul li:hover{
 
 div.Countries{
     display:flex;
-    align-content: center;
 }
 div.Countries div{
     width:33%;
