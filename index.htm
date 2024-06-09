@@ -290,6 +290,31 @@ referenced using a dot before the name. IDs are similar to classes, but only one
 and, when referenced, a # is used before the name. Names are case sensitive to classes and IDs.</p>
 
 <hr>
+<h1>Iframes</h1>
+<p>Iframes are used to have a webpage embedded in a webpage. They're syntax is similar to an images, they need a
+source, title (instead of alt), style which can be used to specify width, height and border and a name can be
+added so that it can be targeted by a link</p>
+<p><a href="index.htm" target="Iframe1">Open this website in an iframe</a></p>
+<iframe src="" title="Github" name="Iframe1"
+    style="width:80%;height:850px;border:none"></iframe>
+
+<hr>
+<h1>JavaScript</h1>
+<p>JS is used to make pages more dynamic and interactive; it adds functionality. It uses the script tag which
+either contains its own script, or points to an external script with the src attribute. One usage is it can
+access a HTML element by an ID and edit its content/attributes. JS can either be run when the website loads, but
+can also be executed using a button. The noscript tag is used for browsers who have scripts disabled</p>
+<script>
+function changeText(color) {
+  document.getElementById('changetext').style.color = color;
+}
+</script>
+<noscript>Browser doesn't support or disabled scripts</noscript>
+<button onclick="changeText('blue')">Click this to change the text to blue</button>
+<button onclick="changeText('red')">Click this to change the text to red</button>
+<p id="changetext">Change this text by clicking the button above.</p>
+
+<hr>
 
 </body>
 </html>
