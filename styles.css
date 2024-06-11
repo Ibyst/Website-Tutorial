@@ -34,7 +34,7 @@ tr:nth-child(even):hover{
     background-color:rgb(20, 20, 20);
 }
 
-ul{
+.navmenu ul{
     list-style-type: none;
     background-color: black;
     color:white;
@@ -43,27 +43,48 @@ ul{
     margin:0px;
     padding:0px;
 }
-ul li{
+.navmenu ul li{
     float:left
 }
 
-ul li p{
+.navmenu ul li p{
     display: block;
     padding-left:10px;
     padding-right:10px;
 }
 
-ul li:hover{
+.navmenu ul li:hover{
     background-color:#101010;
 }
 
-div.Countries{
+.Countries{
     display:flex;
 }
-div.Countries div{
+.Countries div{
     width:33%;
     margin-left:0.33%;
 }
-div.Countries div h2, div.Countries div p{
+.Countries div h2, .Countries div p{
     margin:10px;
+}
+
+.responsive{
+    display:flex;
+}
+.responsive div{
+    width:33%;
+    margin-left:0.33%;
+}
+.responsive div h2, .responsive div p{
+    margin:10px;
+}
+@media screen and (max-width: 800px){
+    .responsive{
+        display:block;
+    }
+    .responsive div{
+        width:99%;
+        margin:0.33%;
+        padding:1px;
+    }
 }
