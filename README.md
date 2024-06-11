@@ -16,3 +16,5 @@ I am also learning how to use git and github as this is the first project im wor
 8/06/24 - just did a little bit on classes and IDs, excited for the upcoming chapters
 
 9/06/24 - learnt about iframes and javascript
+
+11/06/24 - technically did a bit of today's work yesterday, but worked on layout and semantics, responsive web design and computercode.
