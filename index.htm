@@ -5,6 +5,13 @@
 <title>Website Tutorial</title>
 <link rel="stylesheet" href="styles.css"> <!--this links the HTML to the CSS file-->
 <linK rel="icon" type="image/x-icon" href="1234.png"> <!--adds a favicon-->
+<base target="_blank">
+<meta charset="UTF-8">
+<meta name="description" content="website tutorial">
+<meta name="keywords" content="HTML, CSS, JS">
+<meta name="author" content="Ibyst">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--first sets the width of the page to follow the screen-width of the device, then sets inital zoom to 1-->
 </head>
 
 <body>
@@ -89,7 +96,8 @@ used to define a style for many HTML pages</p>
 <p>can have the target _self (open in the same tab), _blank (open in a new tab),
 and _parent and _top (which aren't really used anymore)</p>
 <p>Also, there are absolute URLs, which has a full web address with the https://www part, and relative URLs which 
-link to a page within the same website</p>
+link to a page within the same website. Using ../ in an address means accessing the file one level above the
+current root, e.g. '../images/pic.png'</p>
 <p>You can have an image act as a link too by putting the 'img' tag inside the 'a' tag, additionally
 you can add a tooltip for an even better effect.</p>
 <a href="https://github.com/Ibyst/Ibyst" target="_blank" title="github">
@@ -218,7 +226,7 @@ element if it is present.</p>
 </table>
 
 <hr>
-<h1>Lists</h1>
+<h1 id="10">Lists</h1>
 <p>Lists can be unordered/bulleted ('ul'), ordered/numbered ('ol') or descriptive('dl'). Lists can be nested. An
 unordered list can have a disc, circle, square or none as its item marker. An ordered list can use numbers,
 capital/lowercase letters, or capital/lowercase roman numerals, and it can start counting from any number</p> 
@@ -242,15 +250,18 @@ capital/lowercase letters, or capital/lowercase roman numerals, and it can start
 </ol>
 
 <p>A list can be made horizontal: paired with some styling, this can be used to create a navigation menu.</p>
-<ul>
-    <li><p>Home</p></li>
-    <li><p>About</p></li>
-    <li><p>Games</p></li>
-    <li><p>Contact</p></li>
-</ul>
+<div class="navmenu">
+    <ul>
+        <li><p>Home</p></li>
+        <li><p>About</p></li>
+        <li><p>Games</p></li>
+        <li><p>Contact</p></li>
+    </ul>
+</div>
+
 
 <hr>
-<h1>Display Values, Div and Span</h1>
+<h1 id="11">Display Values, Div and Span</h1>
 <p>Every element has a default display value, most commonly either block or inline.</p>
 <p>Block-level elements always start on a new line, has some space (margin) before and after the element, and 
 takes up the full width available. Examples include: blockquotes, h1-6, horiontal rules, lists, div and p.</p>
@@ -283,14 +294,14 @@ container and styles can then be applied to the <span style="background-color: b
 text.</span></p>
 
 <hr>
-<h1>Classes and IDs</h1>
+<h1 id="12">Classes and IDs</h1>
 <p>Classes are used to specify certain parts of a document to be used by CSS and JS. Classes can be used for
 many HTML elements, and one element can have many classes (by having a space in between them). Classes are
 referenced using a dot before the name. IDs are similar to classes, but only one element can have a certain ID
 and, when referenced, a # is used before the name. Names are case sensitive to classes and IDs.</p>
 
 <hr>
-<h1>Iframes</h1>
+<h1 id="13">Iframes</h1>
 <p>Iframes are used to have a webpage embedded in a webpage. They're syntax is similar to an images, they need a
 source, title (instead of alt), style which can be used to specify width, height and border and a name can be
 added so that it can be targeted by a link</p>
@@ -299,7 +310,7 @@ added so that it can be targeted by a link</p>
     style="width:80%;height:850px;border:none"></iframe>
 
 <hr>
-<h1>JavaScript</h1>
+<h1 id="14">JavaScript</h1>
 <p>JS is used to make pages more dynamic and interactive; it adds functionality. It uses the script tag which
 either contains its own script, or points to an external script with the src attribute. One usage is it can
 access a HTML element by an ID and edit its content/attributes. JS can either be run when the website loads, but
@@ -313,6 +324,76 @@ function changeText(color) {
 <button onclick="changeText('blue')">Click this to change the text to blue</button>
 <button onclick="changeText('red')">Click this to change the text to red</button>
 <p id="changetext">Change this text by clicking the button above.</p>
+
+<hr>
+<h1 id="14">Head</h1>
+<p>Containts metadata about the website and commonly contains a few tags. The title tag is used to set a title
+for the page, also used by search engines. The style tag can be added as internal CSS. Links can be added for
+things like favicons and external CSS. Scripts can also be added here. A new tag is the meta tag, which can be
+used to specify the character set, page description, keywords, author, even auto-refreshing, and importantly,
+the viewport settings. The viewport is the user's visible area of the page, it is important to control this
+to manage the dimensions and scaling. Lastly, the base tag can be used to specify the base URL and/or target
+for all relative URLs.</p>
+
+<hr>
+<h1 id="15">Layout and Semantics</h1>
+<img src="layout.gif" alt="layout">
+<p>Pages usually follow a certain layout. HTML has certain semantic elements that all act like 'p', but the tags
+help with code readability and styling. This sort of layout can be achieved in a few ways, such as with 'float'
+'flex' and 'grid', as mentioned before but I think flex is the best. A list of all semantic tags:</p>
+<ul>
+    <li>article</li>
+    <li>aside</li>
+    <li><em>details</em></li>
+    <li><em>figcaption</em></li>
+    <li><em>figure</em></li>
+    <li>footer</li>
+    <li>header</li>
+    <li><em>main</em></li>
+    <li><em>mark</em></li>
+    <li>nav</li>
+    <li>section</li>
+    <li><em>summary</em></li>
+    <li><em>time</em></li>
+</ul>
+<p>Section is used like 'div', a thematic group of content, typically with a heading. An article should make
+sense on its own, could even be distrubted separate from the website, like a blog post. Nav is used for a major
+block of links. Aside's content should be indirectly linked to the surrounding content. The figure tag is used
+like 'div', to contain something like an image and a figcaption</p>
+
+<hr>
+<h1 id="16">Responsiveness</h1>
+<p>Responsive web design is when a page can resize or hide parts to make it look good on all devices (laptop,
+tablet, phone). First, add the viewport setting in the meta tag in the head. An image's size can be set to a
+fixed width, using px or a percentage of the screen (so it scales), using %. However, with width, the image may
+stretch too much, so max-width can be used. Also, the picture element can be used. Text can also automatically
+resize if the vw, or viewport, units are used, where 1vw = 1% screen width. You can add a media query to
+change CSS depending on the size of the page. Resize this page to see a common effect on the content below</p>
+
+<div class="responsive">
+    <div style="background-color: #C0CCCC;">
+        <h2>England</h2>
+        <p>Its capital is London</p>
+        <p>It is a small country</p>
+    </div>
+    <div style="background-color: #CCC0CC;">
+        <h2>Pakistan</h2>
+        <p>Its capital is Islamabad</p>
+        <p>It is a medium country</p>
+    </div>
+    <div style="background-color: #CCCCC0;">
+        <h2>Saudi Arabia</h2>
+        <p>Its capital is Riyadh</p>
+        <p>It is a large country</p>
+    </div>
+</div>
+
+<hr>
+<h1 id="17">Computercode</h1>
+<p>A few tags are useful to display technical things on a page. This includes the code tag <code>which looks
+like this</code>, which can be put in a 'pre' element to preserve whitespace. The kbd tag is for displaying
+keyboard input like <kbd>ctrl+a</kbd>. The samp tag is for displaying output from a computer like <samp>
+Err: file not found</samp> and the var tag is for a variable or for maths like <var>bh/2</var>.</p>
 
 <hr>
 
