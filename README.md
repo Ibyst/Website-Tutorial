@@ -18,3 +18,5 @@ I am also learning how to use git and github as this is the first project im wor
 9/06/24 - learnt about iframes and javascript
 
 11/06/24 - technically did a bit of today's work yesterday, but worked on layout and semantics, responsive web design and computercode.
+
+12/06/24 - finished the HTML tutorial section on w3schools with HTML etiquette and entities, and added an interactive table of contents as the page was getting quite long. I'm planning on starting CSS, possibly JS, tomorrow as I feel like I know most of the HTML I would need to make a 'portfolio' website.
